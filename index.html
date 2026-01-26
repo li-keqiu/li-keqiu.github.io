@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. Keqiu Li - Home Page</title>
+    <style>
+        /* --- 基础设置 --- */
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: "Times New Roman", Times, serif;
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        /* 链接样式 */
+        a { color: #0000EE; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* 布局容器 */
+        .container { display: flex; min-height: 100vh; }
+
+        /* --- 左侧边栏 (Fixed Sidebar) --- */
+        .sidebar {
+            width: 240px;
+            padding: 40px 20px;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            border-right: 1px solid #eee;
+            background-color: #fafafa;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        /* 侧边栏菜单 */
+        .nav-menu { list-style: none; padding: 0; margin: 0; }
+        .nav-menu li { margin-bottom: 12px; }
+        .nav-menu a {
+            color: #444;
+            display: block;
+            padding: 2px 0;
+            transition: 0.2s;
+        }
+        .nav-menu a:hover {
+            color: #0000EE;
+            font-weight: bold;
+            padding-left: 5px;
+        }
+
+        /* --- 右侧主要内容 (Main Content) --- */
+        .main-content {
+            margin-left: 240px; /* 留出侧边栏宽度 */
+            padding: 50px 70px;
+            flex: 1;
+            max-width: 900px;
+        }
+
+        /* --- 顶部个人信息区 (Header with Photo) --- */
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between; /* 左右分布 */
+            align-items: flex-start; /* 顶部对齐 */
+            margin-bottom: 40px;
+        }
+        .header-text {
+            flex: 1; /* 文字占据剩余空间 */
+            padding-right: 20px;
+        }
+        .header-photo {
+            width: 240px; /* 照片宽度 */
+            height: auto; /* 高度自适应 */
+            border: 1px solid #ccc;
+            padding: 3px; /* 类似相框的内边距 */
+            background: #fff;
+        }
+
+        /* 标题体系 */
+        h1 { 
+            font-size: 32px; 
+            margin-top: 0; 
+            margin-bottom: 15px; 
+            font-weight: bold;
+        }
+        h2 { 
+            font-size: 22px; 
+            border-bottom: 1px solid #ccc; 
+            padding-bottom: 8px; 
+            margin-top: 50px; 
+            margin-bottom: 20px;
+            scroll-margin-top: 20px; 
+        }
+        h3 { 
+            font-size: 18px; 
+            font-weight: bold; 
+            margin-top: 30px; 
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* 列表优化 */
+        ul { padding-left: 20px; margin-top: 5px; }
+        li { margin-bottom: 8px; text-align: justify; }
+        
+        /* 细节样式 */
+        .date { font-weight: bold; min-width: 130px; display: inline-block; }
+        .funding { color: #555; font-style: italic; font-size: 0.95em; }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+                padding: 10px 20px;
+            }
+            .nav-menu { display: flex; flex-wrap: wrap; gap: 15px; }
+            .nav-menu li { margin-bottom: 0; }
+            
+            .main-content { margin-left: 0; padding: 20px; }
+            .header-wrapper { flex-direction: column-reverse; } /* 手机上照片在文字上方 */
+            .header-photo { margin-bottom: 20px; width: 140px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="sidebar">
+        <h3 style="margin-top:0; margin-bottom:20px; font-size:18px;">Navigation</h3>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#research">Research Interests</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#activities">Professional Activities</a></li>
+            <li><a href="#projects">Research Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+        </ul>
+
+        <div style="margin-top: 40px; font-size: 13px; color: #666; border-top: 1px solid #eee; padding-top: 20px;">
+            <p>
+                <strong>Contact:</strong><br>
+                Tianjin University<br>
+                No.135 Yaguan Road<br>
+                Tianjin, China
+            </p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        
+        <section id="home">
+            <div class="header-wrapper">
+                <div class="header-text">
+                    <h1>Keqiu Li</h1>
+                    <p style="font-size: 16px; line-height: 1.6;">
+                        <strong>Professor (Tenure Track)</strong><br>
+                        Dean, College of Intelligence and Computing, Tianjin University<br>
+                        Director, Tianjin Key Laboratory of Advanced Networking (TANK Lab)
+                    </p>
+                    <p>
+                        <strong>Email:</strong> <a href="mailto:keqiu@tju.edu.cn">keqiu@tju.edu.cn</a><br>
+                        <strong>Phone:</strong> (+86) 22-85356515
+                    </p>
+                </div>
+                
+                <img src="photo.jpg" alt="Prof. Keqiu Li" class="header-photo">
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research Interests</h2>
+            <ul>
+                <li>Emerging Networking Architectures & Protocols</li>
+                <li>Datacenter Networks</li>
+                <li>Software Defined Networks (SDN)</li>
+                <li>Internet of Things (IoT)</li>
+                <li>Cloud Computing & Mobile Computing</li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Academic Background</h2>
+            <h3>Education</h3>
+            <ul>
+                <li>
+                    <span class="date">2002.10 – 2005.09</span>
+                    <strong>PhD</strong>, School of Information Technology, Japan Advanced Institute of Science and Technology, Japan.
+                </li>
+                <li>
+                    <span class="date">1994.10 – 1997.04</span>
+                    <strong>MS</strong>, Department of Applied Mathematics, Dalian University of Technology, China.
+                </li>
+                <li>
+                    <span class="date">1990.10 – 1994.07</span>
+                    <strong>BS</strong>, Department of Applied Mathematics, Dalian University of Technology, China.
+                </li>
+            </ul>
+
+            <h3 id="career">Career</h3>
+            <ul>
+                <li><span class="date">2018.05 - Present</span> Dean, College of Intelligence and Computing, Tianjin University</li>
+                <li><span class="date">2015.07 - 2018.05</span> Dean, School of Computer Science and Technology / School of Software, Tianjin University, China.</li>
+                <li><span class="date">2015.07 - Present</span> Professor, School of Computer Science and Technology, Tianjin University, China.</li>
+                <li><span class="date">2009.12 - 2015.07</span> Vice Dean, School of Computer Science and Technology, Dalian University of Technology, China.</li>
+                <li><span class="date">2007.03 - Present</span> Professor, School of Computer Science and Technology, Dalian University of Technology, China.</li>
+                <li><span class="date">2005.10 - 2007.09</span> Postdoctoral Research Fellow, Research Center for Advanced Science and Technology, University of Tokyo, Japan.</li>
+                <li><span class="date">2001.01 - 2002.09</span> Lecturer, Department of Computer Science and Engineering, Dalian University of Technology, China.</li>
+                <li><span class="date">1997.05 - 2000.12</span> Engineer, Section of Computer Application Technology, Dalian Electronic Research Institute, China.</li>
+            </ul>
+        </section>
+
+        <section id="awards">
+            <h2>Awards & Academic Activities</h2>
+            <h3>Awards</h3>
+            <ul>
+                <li><strong>IEEE Fellow</strong>, International Level, 2023</li>
+                <li>“Software-Defined Cloud Computing Resource Management Platform,” <strong>First Prize of Tianjin Science and Technology Progress Award</strong>, First Contributor, Tianjin Municipal Government, 2022</li>
+                <li>The Leading Talent of Science and Technology Innovation of National High-Level Talents Special Support Plan (Ten Thousand Plan), 2017.</li>
+                <li>MOST Leading Youth Talents on Science and Technology Innovation, 2016.</li>
+                <li>NSFC National Science Fund for Distinguished Young Scholars, 2012.</li>
+                <li>Technology Invention Awards (First Prize) of Liaoning Province, China, 2014.</li>
+                <li>The Youth Science and Technology Award of Liaoning Province, China, 2011.</li>
+                <li>MOE Natural Science Award (First Prize) for Outstanding Scientific and Technological Achievements, 2010.</li>
+                <li>New Century Excellent Talents in University of Ministry of Education of China, 2007.</li>
+            </ul>
+
+            <h3 id="activities">Professional Activities</h3>
+            <ul>
+                <li><strong>General Chair:</strong> IEEE ICA3PP 2023, IEEE ICPADS 2018, IEEE SmartIoT 2018, CWSN 2017, IEEE BDCloud 2015, IEEE MSN 2013</li>
+                <li><strong>Track Chair:</strong> IEEE ICCCN 2019</li>
+                <li><strong>Program Chair:</strong> IEEE ISPA 2016</li>
+                <li><strong>TPC Member:</strong> IEEE INFOCOM (2016-2018), IEEE/ACM IWQoS (2016-2017), IEEE ICC (2017)</li>
+                <li><strong>Editorial Board:</strong>
+                    <ul>
+                        <li>IEEE Transactions on Computer (TC), 2011-2015</li>
+                        <li>IEEE Transactions on Parallel and Distributed Systems (TPDS), 2010-2014</li>
+                        <li>Chinese Journal of Computers, 2010-2011</li>
+                        <li>Communications of The CCF, 2009-2010</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Research Projects</h2>
+            <ul>
+                <li>
+                    <strong>“R&D of Next-Generation Artificial Intelligence Basic Software and Hardware Systems”</strong>, Innovation Consortium Major Science and Technology Project of Tianjin.<br>
+                    <span class="funding">PI, RMB 3,000,000, 2024.05-2026.12</span>
+                </li>
+                <li>
+                    <strong>“High-Performance Adaptive Cross-Chain Interoperability Technologies and Experimental Validation”</strong>, National Key R&D Program of China.<br>
+                    <span class="funding">PI, RMB 34,000,000, 2022.11-2025.10</span>
+                </li>
+                <li>
+                    <strong>“Network Anomaly Detection and Localization Technologies”</strong>, the Joint Program of NSFC and China General Technology.<br>
+                    <span class="funding">PI, RMB 2,510,000, 2019.01-2022.12</span>
+                </li>
+                <li>
+                    <strong>“Transformation and Upgrading of Tianjin Intelligent Transportation Industry”</strong>, Strategic Consulting Project of the Chinese Academy of Engineering.<br>
+                    <span class="funding">PI, RMB 1,400,000, 2020.01-2022.03</span>
+                </li>
+                <li>
+                    <strong>“Key Technologies of Software Defined Intelligent Computing”</strong>, the Key Program of Artificial Intelligence of Natural Science Foundation of Tianjin.<br>
+                    <span class="funding">PI, RMB 3,000,000, 2018.10-2021.09</span>
+                </li>
+                <li>
+                    <strong>“Software Defined Cloud Computing Measurement and Evaluation”</strong>, National Key R&D Plan subtopic.<br>
+                    <span class="funding">PI (Topic Leader), RMB 3,220,000, 2016.07-2021.06</span>
+                </li>
+                <li>
+                    <strong>“Basic Theories and Key Technologies of Software Defined Networking”</strong>, the State Key Program of NSFC.<br>
+                    <span class="funding">PI, RMB 3,500,000, 2015.01-2019.12</span>
+                </li>
+                <li>
+                    <strong>“Data Center Networks”</strong>, the NSFC Distinguished Young Scholars.<br>
+                    <span class="funding">PI, RMB 2,800,000, 2013.01-2016.12</span>
+                </li>
+                <li>
+                    <strong>“Research on Cloud-based Big Data Retrieval Optimization and Intelligent Processing”</strong>, NSFC.<br>
+                    <span class="funding">PI, RMB 580,000, 2012.01-2015.12</span>
+                </li>
+                <li>
+                    <strong>China Education Grid the second period projects</strong>.<br>
+                    <span class="funding">RMB 4,900,000, 2012.01-2012.12</span>
+                </li>
+                <li>
+                    <strong>“Application of Caching Technology for Wireless Sensor Networks”</strong>, NSFC.<br>
+                    <span class="funding">PI, RMB 320,000, 2010.01-2012.12</span>
+                </li>
+                <li>
+                    <strong>“Next Generation Internet Business Commercial Test and Equipment Industrialization...”</strong>, National Development and Reform Commission.<br>
+                    <span class="funding">PI, RMB 2,000,000, 2009.01-2010.12</span>
+                </li>
+                <li>
+                    <strong>“Key Technologies on Trusted Computing in Network Environment”</strong>.<br>
+                    <span class="funding">PI, RMB 500,000, 2008.01-2010.12</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            
+            <h3>Books</h3>
+            <ul>
+                <li>Gaotao Shi, <strong>Keqiu Li</strong>: <em>Signal Interference in WiFi and ZigBee Networks</em>, Springer International Publishing, 2016.</li>
+                <li>Heng Qi, <strong>Keqiu Li</strong>: <em>Software Defined Networking Applications in Distributed Datacenters</em>, Springer International Publishing, 2016.</li>
+            </ul>
+
+            <h3>Journal Articles & Conference Proceedings</h3>
+            
+            <h4>2025</h4>
+            <ul>
+                <li>Dengcheng Hu, Jianrong Wang, Xiulong Liu, Hao Xu, Xujing Wu, Muhammad Shahzad, Guyue Liu, <strong>Keqiu Li</strong>. Ladder: A Convergence-based Structured DAG Blockchain for High Throughput and Low Latency. <em>USENIX NSDI</em> 2025: 779-794.</li>
+                <li>Jianing You, Kang Chen, Laiping Zhao, Yiming Li, Yichi Chen, Yuxuan Du, Yanjie Wang, Luhang Wen, Keyang Hu, <strong>Keqiu Li</strong>. AlloyStack: A Library Operating System for Serverless Workflow Applications. <em>ACM EuroSys</em> 2025: 921-937.</li>
+                <li>Liyuan Ma, Dengcheng Hu, Xiulong Liu, Hao Xu, Jianrong Wang, <strong>Keqiu Li</strong>. AIGC-CM: An Efficient and Scalable Blockchain Solution for AIGC Copyright Management. <em>IEEE INFOCOM</em> 2025: 1-10.</li>
+                <li>Gaowei Shi, Xiulong Liu, Huan Wang, Yuhan Li, Hao Xu, Liyuan Ma, <strong>Keqiu Li</strong>. BrokerAS: Towards Fault-tolerant Atomic Cross-chain Swaps. <em>IEEE INFOCOM</em> 2025: 1-10.</li>
+                <li>Zhixin Zhao, Yitao Hu, Ziqi Gong, Guotao Yang, Wenxin Li, Xiulong Liu, <strong>Keqiu Li</strong>, Hao Wang. Harpagon: Minimizing DNN Serving Cost via Efficient Dispatching, Scheduling and Splitting. <em>IEEE INFOCOM</em> 2025: 1-10.</li>
+                <li>Song Zhang, Wenxin Li, Yulong Li, Yuan Liu, Lide Suo, Sheng Chen, Yitao Hu, Laiping Zhao, <strong>Keqiu Li</strong>. Lark: A Buffer-aware Building Block for Programmable Packet Scheduling in Datacenters. <em>IEEE INFOCOM</em> 2025: 1-10.</li>
+                <li>Hao Xu, Jiaqi Zhang, Xiulong Liu, Zhimin Yu, Tingyu Fan, Baochao Chen, <strong>Keqiu Li</strong>. Tangram: Enabling Efficient and Balanced Dynamic Storage Extension on Sharding Blockchain Systems. <em>IEEE Transactions on Computers</em> 74(6): 2031-2044, 2025.</li>
+                <li>Yulong Li, Wenxin Li, Yuxuan Du, Yinan Yao, Song Zhang, Linxuan Zhong, <strong>Keqiu Li</strong>. Flexible Job Scheduling With Spatial-Temporal Compatibility for In-Network Aggregation. <em>IEEE Transactions on Computers</em> 74(4): 1322-1333, 2025.</li>
+                <li>Xiulong Liu, Zhiyuan Zheng, Hao Xu, Zhelin Liang, Gaowei Shi, Chenyu Zhang, <strong>Keqiu Li</strong>. Enabling Consistent Sensing Data Sharing Among IoT Edge Servers via Lightweight Consensus. <em>IEEE Transactions on Computers</em> 74(6): 2045-2057, 2025.</li>
+                <li>Yitao Hu, Xiulong Liu, Guotao Yang, Linxuan Li, Kai Zeng, Zhixin Zhao, Sheng Chen, Laiping Zhao, Wenxin Li, <strong>Keqiu Li</strong>. TightLLM: Maximizing Throughput for LLM Inference via Adaptive Offloading Policy. <em>IEEE Transactions on Computers</em> 74(7): 2195-2209, 2025.</li>
+                <li>Qixuan Cai, Ruikai Chu, Kaixuan Zhang, Xiulong Liu, Xinyu Tong, Xin Xie, Jiancheng Chen, <strong>Keqiu Li</strong>. AMRE: Adaptive Multilevel Redundancy Elimination for Multimodal Mobile Inference. <em>IEEE Transactions on Mobile Computing</em> 24(8): 7568-7583, 2025.</li>
+                <li>Zijuan Liu, Xiulong Liu, Xinyu Tong, Xin Xie, Jiancheng Chen, Ming Yang, <strong>Keqiu Li</strong>. MLiquID: Towards Mobile Liquid Sensing With COTS RFIDs. <em>IEEE Transactions on Mobile Computing</em> 24(9): 7851-7865, 2025.</li>
+                <li>Xiulong Liu, Hankai Liu, Jiaqi Zhang, Xin Xie, <strong>Keqiu Li</strong>. Multi-User Behavioral Privacy Filtering for mmWave Radar Sensing. <em>IEEE Transactions on Mobile Computing</em> 24(9): 8347-8361, 2025.</li>
+                <li>Xiulong Liu, Hankai Liu, Yantao Han, Xin Xie, Xinyu Tong, <strong>Keqiu Li</strong>. MHTrack: mmWave-Based Mobile Hand Tracking. <em>IEEE Transactions on Mobile Computing</em> 24(9): 9168-9183, 2025.</li>
+            </ul>
+
+            <h4>2024</h4>
+            <ul>
+                <li>Lide Suo, Yiren Pang, Wenxin Li, Renjie Pei, <strong>Keqiu Li</strong>, Xiulong Liu, Xin He, Yitao Hu, Guyue Liu. PPT: A Pragmatic Transport for Datacenters. <em>ACM SIGCOMM</em> 2024: 954-969.</li>
+                <li>Wenxin Li, Xin He, Yuan Liu, <strong>Keqiu Li</strong>, Kai Chen, Zhao Ge, Zewei Guan, Heng Qi, Song Zhang, Guyue Liu. Flow Scheduling with Imprecise Knowledge. <em>USENIX NSDI</em> 2024: 95-111.</li>
+                <li>Hao Xu, Xiulong Liu, Chenyu Zhang, Wenbin Wang, Jianrong Wang, <strong>Keqiu Li</strong>. Crackle: A Fast Sector-based BFT Consensus with Sublinear Communication Complexity. <em>IEEE INFOCOM</em> 2024: 1-10.</li>
+                <li>Yulong Li, Wenxin Li, Yinan Yao, Yuxuan Du, <strong>Keqiu Li</strong>. Host-driven In-Network Aggregation on RDMA. <em>IEEE INFOCOM</em> 2024: 1051-1060.</li>
+                <li>Xiulong Liu, Bojun Zhang, Sheng Chen, Xin Xie, Xinyu Tong, Tao Gu, <strong>Keqiu Li</strong>. A Wireless Signal Correlation Learning Framework for Accurate and Robust Multi-Modal Sensing. <em>IEEE Journal on Selected Areas in Communications</em> 42(9): 2424-2439, 2024.</li>
+                <li>Laiping Zhao, Yushuai Cui, Yanan Yang, Xiaobo Zhou, Tie Qiu, <strong>Keqiu Li</strong>, Yungang Bao. Component-distinguishable Co-location and Resource Reclamation for High-throughput Computing. <em>ACM Transactions on Computer Systems</em> 42(1-2): 1-37, 2024.</li>
+                <li>Liyuan Ma, Xiulong Liu, Yuhan Li, Chenyu Zhang, Gaowei Shi, <strong>Keqiu Li</strong>. GFBE: A Generalized and Fine-Grained Blockchain Evaluation Framework. <em>IEEE Transactions on Computers</em> 73(3): 942-955, 2024.</li>
+                <li>Dengcheng Hu, Jianrong Wang, Xiulong Liu, Qi Li, <strong>Keqiu Li</strong>. LMChain: An Efficient Load-Migratable Beacon-Based Sharding Blockchain System. <em>IEEE Transactions on Computers</em> 73(9): 2178-2191, 2024.</li>
+                <li>Qixuan Cai, Xiulong Liu, Kaixuan Zhang, Xin Xie, Xinyu Tong, <strong>Keqiu Li</strong>. ACF: An Adaptive Compression Framework for Multimodal Network in Embedded Devices. <em>IEEE Transactions on Mobile Computing</em> 23(5): 5195-5211, 2024.</li>
+                <li>Xiulong Liu, Bojun Zhang, Lizhang Wang, Sheng Chen, Xin Xie, Xinyu Tong, Tao Gu, <strong>Keqiu Li</strong>. Fine-Grained Recognition of Manipulation Activities on Objects via Multi-Modal Sensing. <em>IEEE Transactions on Mobile Computing</em> 23(10): 9614-9628, 2024.</li>
+                <li>Jiuwu Zhang, Xiulong Liu, Sheng Chen, Xinyu Tong, Zeyu Deng, Tao Gu, <strong>Keqiu Li</strong>. Toward Robust RFID Localization via Mobile Robot. <em>IEEE/ACM Transactions on Networking</em> 32(4): 2904-2919, 2024.</li>
+            </ul>
+
+            <h4>2023</h4>
+            <ul>
+                <li>Yanan Yang, Laiping Zhao, Yiming Li, Shihao Wu, Yuechan Hao, Yuchi Ma, <strong>Keqiu Li</strong>. Flame: A Centralized Cache Controller for Serverless Computing. <em>ACM ASPLOS</em> 2023: 153-168.</li>
+                <li>Yichen Tian, Yunliang Wang, Ruikai Zheng, Xiulong Liu, Xinyu Tong, <strong>Keqiu Li</strong>. WSTrack: A Wi-Fi and Sound Fusion System for Device-free Human Tracking. <em>IEEE INFOCOM</em> 2023: 1-10.</li>
+                <li>Hankai Liu, Xiulong Liu, Xin Xie, Xinyu Tong, <strong>Keqiu Li</strong>. PmTrack: Enabling Personalized mmWave-based Human Tracking. <em>Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies</em> 7(4): 167:1-167:30, 2023.</li>
+                <li>Lihai Nie, Xiaoyang Shan, Laiping Zhao, <strong>Keqiu Li</strong>. PKDGA: A Partial Knowledge-Based Domain Generation Algorithm for Botnets. <em>IEEE Transactions on Information Forensics and Security</em> 18: 4854-4869, 2023.</li>
+                <li>Hao Xu, Bin Xiao, Xiulong Liu, Li Wang, Shan Jiang, Weilian Xue, Jianrong Wang, <strong>Keqiu Li</strong>: Empowering Authenticated and Efficient Queries for STK Transaction-Based Blockchains. <em>IEEE Transactions on Computers</em> 72(8): 2209-2223, 2023.</li>
+                <li>Xiaobo Zhou, Shuxin Ge, Tie Qiu, <strong>Keqiu Li</strong>, Mohammed Atiquzzaman: Energy-Efficient Service Migration for Multi-User Heterogeneous Dense Cellular Networks. <em>IEEE Transactions on Mobile Computing</em> 22(2): 890-905, 2023.</li>
+                <li>Xin Xie, Xiulong Liu, Junxiao Wang, Song Guo, Heng Qi, <strong>Keqiu Li</strong>. Efficient Integrity Authentication Scheme for Large-Scale RFID Systems. <em>IEEE Transactions on Mobile Computing</em> 22(9): 5216-5230, 2023.</li>
+                <li>Hao Liu, Wenxin Li, Yiren Pang, Renjie Pei, Yitao Hu, Yuan Liu, Lide Suo, <strong>Keqiu Li</strong>. Accelerating Data Delivery of Latency-Sensitive Applications in Container Overlay Network. <em>IEEE Transactions on Parallel and Distributed Systems</em> 34(12): 3046-3058, 2023.</li>
+                <li>Sheng Chen, Qihang Zhang, Xiaodong Dong, Xiaoyi Tao, <strong>Keqiu Li</strong>, Tie Qiu, Ivan Lee: Sublessor: A Cost-Saving Internet Transit Mechanism for Cooperative MEC Providers in Industrial Internet of Things. <em>IEEE Transactions on Industrial Informatics</em> 19(9): 9855-9866, 2023.</li>
+            </ul>
+
+            <h4>2022</h4>
+            <ul>
+                <li>Yanan Yang, Laiping Zhao, Yiming Li, Huanyu Zhang, Jie Li, Mingyang Zhao, Xingzhen Chen, <strong>Keqiu Li</strong>. INFless: a native serverless system for low-latency, high-throughput inference. <em>ACM ASPLOS</em> 2022: 768-781.</li>
+                <li>Jie Li, Laiping Zhao, Yanan Yang, Kunlin Zhan, <strong>Keqiu Li</strong>. Tetris: Memory-efficient Serverless Inference through Tensor Sharing. <em>USENIX ATC</em> 2022: 1-17.</li>
+                <li>Jiuwu Zhang, Xiulong Liu, Tao Gu, Bojun Zhang, Dongdong Liu, Zijuan Liu, <strong>Keqiu Li</strong>. An RFID and Computer Vision Fusion System for Book Inventory using Mobile Robot. <em>IEEE INFOCOM</em> 2022: 1239-1248.</li>
+                <li>Hao Xu, Xiulong Liu, Zhelin Liang, Hongyan Sun, Weilian Xue, Jianrong Wang, <strong>Keqiu Li</strong>. A Transaction Cardinality Estimation Approach for QoS-Adjustable Intelligent Blockchain Systems. <em>IEEE Journal of Selected Areas in Communications</em> 40(12): 3672-3684, 2022.</li>
+                <li>Xin Xie, Xiulong Liu, Heng Qi, Song Guo, <strong>Keqiu Li</strong>. A Tag-Correlation-Based Approach to Fast Identification of Group Tags. <em>IEEE Transactions on Mobile Computing</em> 21(9): 3096-3109, 2022.</li>
+            </ul>
+
+            <h4>2021</h4>
+            <ul>
+                <li>Xiulong Liu, Dongdong Liu, Jiuwu Zhang, Tao Gu, <strong>Keqiu Li</strong>. RFID and camera fusion for recognition of human-object interactions. <em>ACM MobiCom</em> 2021: 296-308.</li>
+                <li>Laiping Zhao, Yanan Yang, Yiming Li, Xian Zhou, <strong>Keqiu Li</strong>. Understanding, predicting and scheduling serverless workloads under partial interference. <em>ACM SC</em> 2021: 1-15.</li>
+                <li>Xin Xie, Xiulong Liu, Song Guo, Heng Qi, <strong>Keqiu Li</strong>. A Lightweight Integrity Authentication Approach for RFID-enabled Supply Chains. <em>IEEE INFOCOM</em> 2021: 1-10.</li>
+                <li>Jiuwu Zhang, Xiulong Liu, Tao Gu, Xinyu Tong, Sheng Chen, <strong>Keqiu Li</strong>. SILoc: A Speed Inconsistency-Immune Approach to Mobile RFID Robot Localization. <em>IEEE INFOCOM</em> 2021: 1-10.</li>
+                <li>Xiulong Liu, Jiuwu Zhang, Shan Jiang, Yanni Yang, <strong>Keqiu Li</strong>, Jiannong Cao, Jiangchuan Liu. Accurate Localization of Tagged Objects Using Mobile RFID-Augmented Robots. <em>IEEE Transactions on Mobile Computing</em> 20(4): 1273-1284, 2021.</li>
+                <li>Wenxin Li, Duowen Liu, Kai Chen, <strong>Keqiu Li</strong>, Heng Qi. Hone: Mitigating Stragglers in Distributed Stream Processing With Tuple Scheduling. <em>IEEE Transactions on Parallel and Distributed Systems</em> 32(8): 2021-2034, 2021.</li>
+            </ul>
+        </section>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin-top: 60px;">
+        <p style="font-size: 13px; color: #777;">Last updated: January 2026</p>
+    </div>
+</div>
+
+</body>
+</html>
